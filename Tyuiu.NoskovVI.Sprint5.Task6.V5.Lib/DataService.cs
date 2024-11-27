@@ -8,11 +8,11 @@ namespace Tyuiu.NoskovVI.Sprint5.Task6.V5.Lib
             int count = 0;
             using (StreamReader reader = new StreamReader(path))
             {
-                if (reader.EndOfStream == false)
+                while (reader.EndOfStream == false)
                 {
-                    foreach(char symbol in reader.ReadToEnd())
+                    foreach(char symbol in reader.ReadLine())
                     {
-                        if (char.IsUpper(symbol)) count++; 
+                        if (symbol >= 'A' && symbol <='Z') count++; 
                     }
                 }
             }
