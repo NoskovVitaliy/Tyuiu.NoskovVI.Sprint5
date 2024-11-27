@@ -25,6 +25,10 @@ namespace Tyuiu.NoskovVI.Sprint5.Task1.V30
             int end = Convert.ToInt32(Console.ReadLine());
 
             ds.SaveToFileTextData(start, end);
+
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
+            Console.WriteLine("***************************************************************************");
             string path = Path.Combine(new string[] { Path.GetTempPath(), "OutPutFileTask1.txt" });
             string text = File.ReadAllText(path);
             Console.WriteLine(text);

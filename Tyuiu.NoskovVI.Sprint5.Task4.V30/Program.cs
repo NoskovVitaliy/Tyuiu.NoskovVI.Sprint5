@@ -1,5 +1,5 @@
-﻿using Tyuiu.NoskovVI.Sprint5.Task0.V6.Lib;
-namespace Tyuiu.NoskovVI.Sprint5.Task0.V6
+﻿using Tyuiu.NoskovVI.Sprint5.Task4.V30.Lib;
+namespace Tyuiu.NoskovVI.Sprint5.Task4.V30
 {
     internal class Program
     {
@@ -9,27 +9,25 @@ namespace Tyuiu.NoskovVI.Sprint5.Task0.V6
             Console.Title = "Спринт #5 | Выполнил: Носков В. И. | ПКТб-24-1";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #4                                                               *");
-            Console.WriteLine("* Тема: класс File                                                        *");
-            Console.WriteLine("* Задание #0                                                              *");
-            Console.WriteLine("* Вариант #6                                                              *");
+            Console.WriteLine("* Тема: Чтение данных из текстового файла                                 *");
+            Console.WriteLine("* Задание #4                                                              *");
+            Console.WriteLine("* Вариант #30                                                             *");
             Console.WriteLine("* Выполнил: Носков Виталий Игоревич | ПКТб-24-1                           *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Сохранить выражение в файл                                              *");
+            Console.WriteLine("* Прочитать данные из файла и высчитать выражения                         *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine("Введите значение x");
-            int x = Convert.ToInt32(Console.ReadLine());
-            ds.SaveToFileTextData(x);
+            Console.WriteLine("Файл находится по пути C:\\DataSprint5\\InPutDataFileTask4V30.txt");
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
-            string path = Path.Combine(new string[] { Path.GetTempPath(), "OutPutFileTask0.txt" });
-            string text = File.ReadAllText(path);
-            Console.WriteLine(text);
+
+            Console.WriteLine(ds.LoadFromDataFile(@"C:\DataSprint5\InPutDataFileTask4V30.txt"));
+
         }
     }
 }

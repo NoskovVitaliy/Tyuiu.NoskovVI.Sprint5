@@ -31,6 +31,9 @@ namespace Tyuiu.NoskovVI.Sprint5.Task2.V5
             }
             ds.SaveToFileTextData(matrix);
 
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
+            Console.WriteLine("***************************************************************************");
             string path = Path.Combine(new string[] { Path.GetTempPath(), "OutPutFileTask2.csv" });
             string result = File.ReadAllText(path);
             Console.WriteLine(result);
